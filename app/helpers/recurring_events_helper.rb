@@ -1,0 +1,2 @@
+module RecurringEventsHelper
+end

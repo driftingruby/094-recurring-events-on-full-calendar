@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table name: recurring_events
+#
+#  id         :integer          not null, primary key
+#  title      :string
+#  anchor     :date
+#  frequency  :integer          default(0)
+#  color      :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  anchor: 2017-08-18
+  frequency: 1
+  color: MyString
+
+two:
+  title: MyString
+  anchor: 2017-08-18
+  frequency: 1
+  color: MyString

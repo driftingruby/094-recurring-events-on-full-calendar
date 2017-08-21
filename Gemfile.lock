@@ -70,6 +70,7 @@ GEM
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     i18n (0.8.6)
+    ice_cube (0.16.2)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
@@ -187,6 +188,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   faker
+  ice_cube
   jbuilder (~> 2.0)
   jquery-rails
   listen (~> 3.0.5)

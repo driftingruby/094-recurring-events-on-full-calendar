@@ -9,6 +9,10 @@
 
   <div class="form-actions">
     <%= f.button :submit %>
+    <%= link_to 'New Recurring Event', 
+                new_recurring_event_path,
+                class: 'btn btn-default', 
+                remote: true if @event.new_record? %>
     <%= link_to 'Delete', 
                 event, 
                 method: :delete, 

@@ -1,0 +1,22 @@
+<%= simple_form_for @recurring_event, remote: true do |f| %>
+  <div class="form-inputs">
+    <%= f.input :title %>
+    <%= f.input :anchor, input_html: { class: "form-control input-sm" } %>
+    <%= f.input :frequency, as: :select, collection: RecurringEvent.frequencies.keys, input_html: { class: "form-control input-sm" } %>
+    <%= f.input :color, as: :select, collection: [['Black','black'], ['Green','green'], ['Red','red']] %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+    <%= link_to 'New Event', 
+                new_event_path,
+                class: 'btn btn-default', 
+                remote: true if @recurring_event.new_record? %>
+    <%= link_to 'Delete', 
+                @recurring_event, 
+                method: :delete, 
+                class: 'btn btn-danger', 
+                data: { confirm: 'Are you sure?' }, 
+                remote: true unless @recurring_event.new_record? %>
+  </div>
+<% end %>

@@ -1,0 +1,7 @@
+$('.calendar').fullCalendar('removeEvents', '<%= "recurring_#{@recurring_event.id}" %>');
+$('.calendar').fullCalendar(
+  'renderEvents', 
+  $.parseJSON("<%= j render(@recurring_event, format: :json).html_safe %>"), 
+  true
+);
+$('.modal').modal('hide');
